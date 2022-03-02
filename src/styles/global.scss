@@ -1,8 +1,15 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
   background: #000;
+}
+
+.content{
+  max-width: 1664px;
+  width: 100%;
+  margin: auto;
 }

@@ -1,0 +1,110 @@
+.login{
+  
+  .content{
+    display: grid;
+    grid-template-columns: 41.8% 58.2%;
+   
+    &__image{
+      background-image: url("../assets/imagebkg.png");
+      background-repeat: repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img{
+        width: 100%;
+        
+      }
+    }
+
+    &__right{
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      img{
+        width: 27%;
+        margin: 70px 0px 50px;
+      }
+
+      h1{
+        font-size: 2.7rem;
+        letter-spacing: 1.4px;
+        margin-bottom: 30px;
+      }
+
+      .subtitle{
+        color: #707070;
+        font-size: 1.4rem;
+        letter-spacing: 1.4px;
+        margin-bottom: 30px;
+      }
+
+      input{
+        padding: 24px 18px;
+        max-width: 421px;
+        width: 100%;
+        margin-bottom: 18px;
+        border: 1px solid #b9b9b9;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 16px);
+        background-size: 1.6rem;
+        border-radius: 3px;
+        box-sizing: border-box;
+        outline: none;
+      }
+      
+      input:focus {
+        box-shadow:2px 3px 5px 1px #cae8e8;
+        -webkit-box-shadow: 2px 3px 5px 1px #cae8e8;
+        -moz-box-shadow: 2px 3px 5px 1px #cae8e8;
+      }
+      
+      .input__login{
+        background-image: url("../assets/ic_usuario.png") ;
+      }
+
+      .input__password{
+        background-image: url("../assets/ic_pass.png") ;
+      }
+
+      .link:active, .link:visited, .link:hover, .link:link{
+        text-decoration: none;
+        color: #000;
+        margin: 24px 0px 42px;
+        border: none;
+        font-weight: 600;
+        outline: none;
+      }
+      .link:focus{
+        text-decoration: underline;
+      }
+
+      .login__button{
+        padding: 24px 18px;
+        max-width: 421px;
+        width: 100%;
+        font-weight: 600;
+        background-color: #f9c444;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow:2px 3px 5px 1px #cae8e8;
+        -webkit-box-shadow: 2px 3px 5px 1px #cae8e8;
+        -moz-box-shadow: 2px 3px 5px 1px #cae8e8;
+        outline: none;
+        &:hover{
+          box-shadow:2px 3px 3px 1px #cae8e8;
+          -webkit-box-shadow: 2px 3px 3px 1px #cae8e8;
+          -moz-box-shadow: 2px 3px 3px 1px #cae8e8;
+        }
+        &:active{
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
