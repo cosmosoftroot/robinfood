@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import logout from '../assets/ic_pass.png'
 import { AuthContext } from '../context/AuthContext'
 
-export default function Header() {
+export default function Header({back}) {
 
   const {removeAuth} = useContext(AuthContext)
   const history = useNavigate()
@@ -22,7 +22,7 @@ export default function Header() {
           </div>
         </nav>
         <section className='title'>
-          <span className='breadcrumb'><Link to="/tiendas" className='link'>Pizzerías</Link></span>
+          <span className='breadcrumb'><Link to="/tiendas" className='link'>{!back ?  "Pizzerías" : "Volver atrás"}</Link></span>
         </section>
     </header>
   )

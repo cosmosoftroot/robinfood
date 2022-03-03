@@ -1,5 +1,5 @@
 import img1 from './panos_pizza_1.png'
-import img2 from './pizzeria_camion.png'
+import img2 from './pizzeria_camion_pizza.png'
 import img3 from './sbarro_pizza.png'
 import img4 from './stroller_pizza_1.png'
 import img5 from './trulli_pizza.png'

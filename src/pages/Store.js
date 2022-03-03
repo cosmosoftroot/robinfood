@@ -10,6 +10,19 @@ import logo from "../assets/Logo.png"
 import StoreCard from "../components/StoreCard";
 import { productImg } from '../assets/productImages'
 import ProductItem from "../components/ProductItem";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  autoplay: true,
+  arrows: false,
+};
 
 export default function Store() {
   const { getStore, loading, loadData } = useContext(DataContext);
@@ -25,8 +38,6 @@ export default function Store() {
     }
   },[])
 
-
-
   return (
     <div className="store">
       <div className="content">
@@ -36,7 +47,7 @@ export default function Store() {
         </section>
         <section className="content__right">
           <section className="content__stores">
-            <Header />
+            <Header back={true} />
             {loading ? (
               <section className="content__loading">
                 <Loading />
@@ -51,13 +62,15 @@ export default function Store() {
                       description={store.description}
                       address={store.address}
                     />
-                    {store.products.map((product, index) => (
-                      <ProductItem 
-                        key={product.key} 
-                        name={product.name}
-                        img={productImg[index]}
-                      />
-                    ))}             
+                    <Slider {...settings} className="slick-products">
+                      {store.products.map((product, index) => (
+                        <ProductItem 
+                          key={product.key} 
+                          name={product.name}
+                          img={productImg[index]}
+                        />
+                      ))}             
+                    </Slider>
                   </>
                 ) : (
                   <div>Ocurrió un error</div>

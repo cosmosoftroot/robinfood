@@ -59,7 +59,7 @@ export default function Stores() {
                       ))}
                     </section>
                   ) : (
-                    <section>No se encontraron resultados</section>
+                    <section className="notFound">No se encontraron resultados</section>
                   )}                
                 </>
               )}
