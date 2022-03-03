@@ -79,8 +79,16 @@
         font-weight: 600;
         outline: none;
       }
+      
       .link:focus{
         text-decoration: underline;
+      }
+
+      .error{
+        font-size: 0.8rem;
+        color: red;
+        width: 410px;
+        margin: -16px 0px 16px;
       }
 
       .login__button{

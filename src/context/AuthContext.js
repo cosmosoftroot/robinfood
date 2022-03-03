@@ -1,24 +1,24 @@
-// import React, { createContext, useState } from 'react'
-// const Context = createContext()
+import React, { createContext, useState } from 'react'
+export const AuthContext = createContext()
 
-// const Provider = ({ children }) => {
-//   const [isAuth, setIsAuth] = useState(false)
+const Provider = ({ children }) => {
+  const [isAuth, setIsAuth] = useState(false)
 
-//   const value = {
-//     isAuth,
-//     activateAuth: () => {
-//       setIsAuth(true)
-//     },
-//     removeAuth: () => {
-//       setIsAuth(false)
-//     }
-//   }
-//   return (<Context.Provider value={value}>{children}</Context.Provider>)
-// }
+  const value = {
+    isAuth,
+    activateAuth: () => {
+      setIsAuth(true)
+    },
+    removeAuth: () => {
+      setIsAuth(false)
+    }
+  }
+  return (<AuthContext.Provider value={value}>{children}</AuthContext.Provider>)
+}
 
-// const DataContext =  {
-//   Provider,
-//   Consumer: Context.Consumer
-// }
+const Context =  {
+  Provider,
+  Consumer: AuthContext.Consumer
+}
 
-// export default DataContext
+export default Context
