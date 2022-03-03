@@ -46,12 +46,17 @@ const Provider = ({ children }) => {
     },500)
   }
 
+  const getStore = (id) => {
+    return stores.find((store)=>store.id === parseInt(id))
+  }
+
   const value = {
     stores,
     users,
     compareUser,
     loading,
-    loadData
+    loadData,
+    getStore
   }
 
   return (<DataContext.Provider value={value}>{children}</DataContext.Provider>)

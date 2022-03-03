@@ -1,0 +1,159 @@
+.store{
+    
+  .content{
+    display: grid;
+    grid-template-columns: 41.8% 58.2%;
+
+   
+    &__image{
+      background-image: url("../assets/imagebkg.png");
+      background-repeat: repeat;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      
+      .banner{
+        width: 100%;        
+      }
+      .logo{
+        z-index: 1;
+        position: absolute;
+        width: 95px;
+        top: 36px;
+        left: 24%;
+      }
+    }
+
+    &__right{
+      position: relative;
+      overflow: hidden;
+      
+      .content__stores{
+        padding: 18px 18px 0px 64px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 90px);
+
+        header{
+          width: 100%;
+          align-items: center;
+          justify-content: flex-end;
+          display: flex;
+          flex-direction: column;
+          nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            .link{
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              margin: 16px;
+              cursor: pointer;
+              img{
+                width: 24px;
+              }
+              span{
+                margin: 0px 4px;
+                color: #000;          
+              }
+            }
+          }
+          .title{
+            width: 100%;
+            .breadcrumb{
+              color: #707070;
+              border-bottom: 2px solid #f6c243;
+              padding: 0px 8px;
+              .link{
+                text-decoration: none;
+                &:hover, &:link, &:active, &:visited{
+                  color: #707070;
+                }
+              }
+            }         
+          }
+        }
+        .card{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 80%;
+          margin: 70px auto;
+          border: 1px solid #f6c243;
+          border-radius: 14px;
+          padding: 30px;
+          
+          h2{
+            margin-bottom: 24px;
+            font-size: 2.1rem;
+          }
+          .description{
+            font-size: 1.2rem;
+            padding-right: 16px;
+            margin-bottom: 16px;
+            color: #707070;
+          }
+          .address{
+            font-size: 0.8rem;
+          }
+          &__info{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            justify-content: center;
+          }
+        }
+        .product{
+          width: 209px;
+          &__name{
+            text-align: center;
+            display: block;
+            font-weight: 600;
+            margin: 8px 0px;
+          }
+        }
+        .content__loading{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 64px 0px;          
+        }
+      }
+      footer{
+        position: absolute;
+        bottom: 0;
+        background-color: #1f1f1f;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 90px;
+        
+        .social-networks{
+          color: #FFF;
+          font-size: 1.6rem;
+          margin: 32px;
+          svg{
+            margin: 0px 4px;
+            cursor: pointer;
+          }
+        }
+
+        img{
+          height: 42px;
+          margin: 24px;
+        }
+      }
+    }
+  }
+}

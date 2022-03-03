@@ -4,7 +4,8 @@ import Layout from "../components/Layout"
 import { AuthContext } from "../context/AuthContext"
 import Login from "../pages/Login"
 import Stores from "../pages/Stores"
- 
+import Store from "../pages/Store" 
+
 export const Router = () => {
   const {isAuth} = useContext(AuthContext)
 
@@ -17,7 +18,7 @@ export const Router = () => {
           {!isAuth && <Route path="/tiendas" element={<Navigate to="/" />} />}
           {!isAuth && <Route path="/tienda/:id" element={<Navigate to="/" />} />}
           <Route path={"/tiendas"}  element={<Stores />}/>
-          <Route path={"/tienda/:id"}  element={<div>tienda</div>}/>
+          <Route path={"/tienda/:id"}  element={<Store />}/>
         </Routes>
       </Layout>
     </BrowserRouter>

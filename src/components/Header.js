@@ -22,7 +22,7 @@ export default function Header() {
           </div>
         </nav>
         <section className='title'>
-          <span className='breadcrumb'>Pizzerías</span>
+          <span className='breadcrumb'><Link to="/tiendas" className='link'>Pizzerías</Link></span>
         </section>
     </header>
   )

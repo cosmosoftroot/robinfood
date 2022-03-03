@@ -73,6 +73,12 @@
               color: #707070;
               border-bottom: 2px solid #f6c243;
               padding: 0px 8px;
+              .link{
+                text-decoration: none;
+                &:hover, &:link, &:active, &:visited{
+                  color: #707070;
+                }
+              }
             }         
           }
         }
@@ -124,13 +130,20 @@
             display: grid;
             grid-gap: 32px;
             padding-bottom: 24px;
-            
+
             @media screen and (min-width: 320px) {
               grid-template-columns: repeat(2, 1fr);
             }
             
             @media screen and (min-width: 1330px) {
               grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .link{
+              text-decoration: none;
+              &:hover, &:link, &:active, &:visited{
+                color: #000;
+              }
             }
   
             .store{

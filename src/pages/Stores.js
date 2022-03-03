@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import pizza from "../assets/Pizza.png";
 import Header from "../components/Header";
 import StoreItem from "../components/StoreItem";
@@ -44,15 +45,17 @@ export default function Stores() {
                 </section>
               ) : (
                 <>
-                  {stores.length > 0 ? (
+                  {filteredStores.length > 0 ? (
                     <section className="content__list">
                       {filteredStores.map((store, index) => (
-                        <StoreItem
-                          logo={storeImg[index]}
-                          name={store.name}
-                          address={store.address}
-                          key={index}
-                        />
+                        <Link key={index} to={`/tienda/${store.id}`} className="link">
+                          <StoreItem
+                            logo={storeImg[index]}
+                            name={store.name}
+                            address={store.address}
+                            
+                          />                        
+                        </Link>
                       ))}
                     </section>
                   ) : (
