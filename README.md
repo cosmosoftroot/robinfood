@@ -1,6 +1,6 @@
 # Best Pizza
 
-Esta es una app desarrollada con el objetivo de demostrar mis competencias como desarrollador Front-end.
+Esta es una app desarrollada con el objetivo de demostrar mis competencias como desarrollador front-end.
 
 Entre sus principales características se destacan:
 
@@ -29,18 +29,26 @@ Entre sus principales características se destacan:
 
 Descargar y clonar el proyecto
 
+
+```
   // Usando SSH
   git clone git@github.com:cosmosoftroot/robinfood.git
 
   // Usando HTTPS
   git clone https://github.com/cosmosoftroot/robinfood.git
 
+```
 
 Instalación de dependencias con NPM
 
+```
   npm install
+
+```
 
 Correr el proyecto
 
+```
   npm run start
 
+```
