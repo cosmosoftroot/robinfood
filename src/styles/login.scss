@@ -2,7 +2,14 @@
   
   .content{
     display: grid;
-    grid-template-columns: 41.8% 58.2%;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      height: 100vh;
+    }
+    @media screen and (min-width: 769px) {
+      grid-template-columns: 41.8% 58.2%;
+    }
    
     &__image{
       background-image: url("../assets/imagebkg.png");
@@ -15,7 +22,13 @@
       
       img{
         width: 100%;
-        
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      @media screen and (min-width: 769px) {
+        display: flex;
       }
     }
 
@@ -38,15 +51,20 @@
 
       .subtitle{
         color: #707070;
-        font-size: 1.4rem;
         letter-spacing: 1.4px;
         margin-bottom: 30px;
+        
+        @media screen and (max-width: 420px) {
+          font-size: 1.2rem;
+        }
+
+        @media screen and (min-width: 421px) {
+          font-size: 1.4rem;
+        }
       }
 
       input{
-        padding: 24px 18px;
-        max-width: 421px;
-        width: 100%;
+        padding: 24px 18px;        
         margin-bottom: 18px;
         border: 1px solid #b9b9b9;
         background-repeat: no-repeat;
@@ -55,6 +73,15 @@
         border-radius: 3px;
         box-sizing: border-box;
         outline: none;
+
+        @media screen and (max-width: 768px) {
+          width: 80%;
+        }
+
+        @media screen and (min-width: 769px) {
+          max-width: 421px;
+          width: 100%;
+        }
       }
       
       input:focus {
@@ -93,8 +120,6 @@
 
       .login__button{
         padding: 24px 18px;
-        max-width: 421px;
-        width: 100%;
         font-weight: 600;
         background-color: #f9c444;
         border: none;
@@ -104,6 +129,16 @@
         -webkit-box-shadow: 2px 3px 5px 1px #cae8e8;
         -moz-box-shadow: 2px 3px 5px 1px #cae8e8;
         outline: none;
+
+        @media screen and (max-width: 768px) {
+          width: 80%;
+        }
+
+        @media screen and (min-width: 769px) {
+          max-width: 421px;
+          width: 100%;
+        }
+        
         &:hover{
           box-shadow:2px 3px 3px 1px #cae8e8;
           -webkit-box-shadow: 2px 3px 3px 1px #cae8e8;

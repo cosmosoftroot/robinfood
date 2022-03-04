@@ -2,7 +2,14 @@
     
   .content{
     display: grid;
-    grid-template-columns: 41.8% 58.2%;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      height: 100vh;
+    }
+    @media screen and (min-width: 769px) {
+      grid-template-columns: 41.8% 58.2%;
+    }
 
    
     &__image{
@@ -24,6 +31,14 @@
         width: 95px;
         top: 36px;
         left: 24%;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 769px) {
+        display: flex;
       }
     }
 
@@ -94,13 +109,34 @@
           
           h2{
             margin-bottom: 24px;
-            font-size: 2.1rem;
+            @media screen and (min-width: 320px) {
+              font-size: 1.1rem;
+              margin-bottom: 8px;
+            }
+
+            @media screen and (min-width: 1024px) {
+              font-size: 1.6rem;
+              margin-bottom: 24px;
+            }
+            
+            @media screen and (min-width: 1440px) {
+              font-size: 2.1rem;
+              margin-bottom: 24px;
+            }
           }
           .description{
             font-size: 1.2rem;
             padding-right: 16px;
             margin-bottom: 16px;
             color: #707070;
+            
+            @media screen and (min-width: 320px) {
+              font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+              font-size: 1.2rem;
+            }
           }
           .address{
             font-size: 0.8rem;
@@ -111,13 +147,54 @@
             flex: 1;
             justify-content: center;
           }
+
+          @media screen and (min-width: 320px) {
+            flex-direction: column-reverse;
+          }
+
+          @media screen and (min-width: 1440px) {
+            flex-direction: row;
+          }
+
+          figure{
+            @media screen and (min-width: 320px) {
+              margin: 0px auto 16px;
+              img{
+                width: 150px;
+              }
+            }
+
+            @media screen and (min-width: 1440px) {
+              margin: 0px auto 16px;
+              img{
+                width: 209px;
+              }
+            }
+          }
+
+          @media screen and (min-width: 320px) {
+            margin: 24px auto;
+            padding: 18px 30px;
+            width: 95%;
+          }
+
+          @media screen and (min-width: 769px) {
+            margin: 24px auto;
+            padding: 30px;
+          }
+
+          @media screen and (min-width: 1600px) {
+            margin: 70px auto;
+          }
         }
+
         .slick-products{
           margin: 0px auto;
           width: 80%;
         }
         .product{
           width: 209px;
+          margin: 0px auto;
           &__name{
             text-align: center;
             display: block;
@@ -132,6 +209,15 @@
           align-items: center;
           padding: 64px 0px;          
         }
+
+        @media screen and (max-width: 768px) {
+          padding: 16px;
+        }
+        
+        @media screen and (min-width: 769px) {
+          padding: 18px 18px 0px 64px;
+        }
+
       }
       footer{
         position: absolute;
