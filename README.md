@@ -12,7 +12,7 @@ Entre sus principales características se destacan:
 - Uitliza un fake login basado en la comparación de la información ingresada por el usuario contra los datos obtenidos del JSON suministrado para la prueba (En Chrome puede salir una advertencia de seguridad por la forma en la que se gestiona el password para simular la autenticación).
 - Los íconos de redes sociales fueron obtenidos utilizando react-icons
 - Los estilos son gestionados utilizando SASS como preprocesador.
-- Despliegue de la solución en la plataforma de Vercel.
+- Despliegue de la solución en la plataforma de Vercel con CI/CD.
  
 ## Especificaciones
 
