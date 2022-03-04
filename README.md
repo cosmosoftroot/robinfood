@@ -52,3 +52,7 @@ Correr el proyecto
   npm run start
 
 ```
+
+## Autor
+
+Iván Darío Sánchez Jiménez

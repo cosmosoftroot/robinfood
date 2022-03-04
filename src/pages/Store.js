@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import pizza from "../assets/Pizza.png";
 import Header from "../components/Header";
 import { DataContext } from "../context/DataContext";
@@ -80,7 +80,9 @@ export default function Store() {
     <div className="store">
       <div className="content">
         <section className="content__image">
-          <img className="logo" src={logo} alt="Best pizza logo" />
+          <Link to="/tiendas">
+            <img className="logo" src={logo} alt="Best pizza logo" />
+          </Link>
           <img className="banner" src={pizza} alt="Pizza" />
         </section>
         <section className="content__right">

@@ -27,7 +27,9 @@ export default function Stores() {
     <div className="stores">
       <div className="content">
         <section className="content__image">
-          <img className="logo" src={logo} alt="Best pizza logo" />
+          <Link to={"/tiendas"}>
+            <img className="logo" src={logo} alt="Best pizza logo" />
+          </Link>
           <img className="banner" src={pizza} alt="Pizza" />
         </section>
         <section className="content__right">
